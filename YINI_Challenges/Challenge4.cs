@@ -4,7 +4,6 @@ namespace YINI_Challenges
 {
     public static class Challenge4
     {
-
         /// <summary>
         /// For this task you will have to calculate and return the stamp duty of a property you have purchased.
         /// Stamp duty is a type of tax applied by the UK goverment when you purchase a property, this tax works in price brackets.
@@ -34,17 +33,20 @@ namespace YINI_Challenges
             
             if (startingValueForTax > 1500000)
             {
-                throw new NotImplementedException();
+                tax = startingValueForTax * 12 / 100;
+                startingValueForTax -= tax;
             }
 
             if (startingValueForTax > 925000)
             {
-                throw new NotImplementedException();
+                tax = startingValueForTax * 10 / 100;
+                startingValueForTax -= tax;
             }
 
             if (startingValueForTax > 300000)
             {
-                throw new NotImplementedException();
+                tax = startingValueForTax * 5 / 100;
+                startingValueForTax -= tax;
             }
 
             return Math.Round(tax, 0);

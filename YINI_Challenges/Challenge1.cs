@@ -39,7 +39,7 @@ namespace YINI_Challenges
         /// <returns>Returns total value of goods</returns>
         public static decimal Buy_One_Get_One_Half_Price(decimal item1, decimal item2)
         {
-            
+            return item1 + item2/2;
         }
 
         /// <summary>
@@ -49,7 +49,10 @@ namespace YINI_Challenges
         /// <returns>Returns total value of goods</returns>
         public static decimal Calculate_Total_Cost(decimal[] amounts)
         {
-            throw new NotImplementedException();
+            decimal sum = 0;
+            foreach(var x in amounts)
+                sum+=x;
+            return sum;
         }
     }
 }
