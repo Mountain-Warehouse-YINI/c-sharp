@@ -18,17 +18,15 @@ namespace YINI_Challenges
         /// <returns>The branch with the best performing sales</returns>
         public static string CalculateBestBranch(SalesItem[] sales) 
         {
-            decimal max = decimal.MinValue;
-            string bestBranch = string.Empty;
+            var branchSales = new Dictionary<string, decimal>();
 
-            foreach(var sale in sales)
-                if(sale.TotalSales > max)
-                {
-                    max = sale.TotalSales;
-                    bestBranch = sale.Branch;
-                }
+            // Implement your code here
+            throw new NotImplementedException();
 
-            return bestBranch;
+            var orderedSales = branchSales.OrderByDescending(x => x.Value);
+            var firstHighest = orderedSales.First();
+
+            return firstHighest.Key;
         }
     }
 

@@ -25,28 +25,25 @@ namespace YINI_Challenges
         /// <returns>Total stamp duty</returns>
         public static decimal StampDuty(decimal propertyPrice)
         {
-            if (propertyPrice <= 300001) 
+            if (propertyPrice <= 300001)
                 return 0;
 
             var startingValueForTax = propertyPrice;
             var tax = 0m;
-            
+
             if (startingValueForTax > 1500000)
             {
-                tax = startingValueForTax * 12 / 100;
-                startingValueForTax -= tax;
+                throw new NotImplementedException();
             }
 
             if (startingValueForTax > 925000)
             {
-                tax = startingValueForTax * 10 / 100;
-                startingValueForTax -= tax;
+                throw new NotImplementedException();
             }
 
             if (startingValueForTax > 300000)
             {
-                tax = startingValueForTax * 5 / 100;
-                startingValueForTax -= tax;
+                throw new NotImplementedException();
             }
 
             return Math.Round(tax, 0);
